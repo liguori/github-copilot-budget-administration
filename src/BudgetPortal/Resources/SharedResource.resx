@@ -1,0 +1,323 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <resheader name="resmimetype"><value>text/microsoft-resx</value></resheader>
+  <resheader name="version"><value>2.0</value></resheader>
+  <resheader name="reader"><value>System.Resources.ResXResourceReader, System.Windows.Forms</value></resheader>
+  <resheader name="writer"><value>System.Resources.ResXResourceWriter, System.Windows.Forms</value></resheader>
+  <data name="Working" xml:space="preserve"><value>Working...</value></data>
+  <data name="SkipToContent" xml:space="preserve"><value>Skip to content</value></data>
+  <data name="BrandHome" xml:space="preserve"><value>Copilot Budget Administration, home</value></data>
+  <data name="Language" xml:space="preserve"><value>Language</value></data>
+  <data name="ApplyLanguage" xml:space="preserve"><value>Apply</value></data>
+  <data name="SignOut" xml:space="preserve"><value>Sign out</value></data>
+  <data name="EnterprisePortal" xml:space="preserve"><value>Enterprise portal</value></data>
+  <data name="MainNavigation" xml:space="preserve"><value>Main navigation</value></data>
+  <data name="Budgets" xml:space="preserve"><value>Budgets</value></data>
+  <data name="PortalFooter" xml:space="preserve"><value>Enterprise delegated administration portal</value></data>
+  <data name="CurrencyFooter" xml:space="preserve"><value>Entra ID &#183; GitHub Enterprise &#183; Amounts in USD</value></data>
+  <data name="SignIn" xml:space="preserve"><value>Sign in</value></data>
+  <data name="TeamBudgets" xml:space="preserve"><value>Your team's budgets.</value></data>
+  <data name="OnePlace" xml:space="preserve"><value>One place.</value></data>
+  <data name="LoginDescription" xml:space="preserve"><value>Manage AI credit budgets for your delegated cost centers and eligible users using your corporate account.</value></data>
+  <data name="Install the GitHub App in at least one organization of the configured enterprise." xml:space="preserve"><value>Install the GitHub App in at least one organization of the configured enterprise.</value></data>
+  <data name="A GitHub App installation in the configured enterprise is suspended. Contact the enterprise administrator." xml:space="preserve"><value>A GitHub App installation in the configured enterprise is suspended. Contact the enterprise administrator.</value></data>
+  <data name="The GitHub App enterprise installation is suspended. Contact the enterprise administrator." xml:space="preserve"><value>The GitHub App enterprise installation is suspended. Contact the enterprise administrator.</value></data>
+  <data name="The GitHub App must have exactly one installation on the configured enterprise. Contact the enterprise administrator." xml:space="preserve"><value>The GitHub App must have exactly one installation on the configured enterprise. Contact the enterprise administrator.</value></data>
+  <data name="SignInWithEntra" xml:space="preserve"><value>Sign in with Microsoft Entra ID</value></data>
+  <data name="AuthorizedOwnersOnly" xml:space="preserve"><value>For authorized Organization Owners only.</value></data>
+  <data name="PermissionsCheckedLive" xml:space="preserve"><value>Permissions are checked on GitHub for every operation.</value></data>
+  <data name="AccessDenied" xml:space="preserve"><value>Access denied</value></data>
+  <data name="RestrictedAccess" xml:space="preserve"><value>Restricted access</value></data>
+  <data name="NoPortalAccess" xml:space="preserve"><value>You do not have access to this portal</value></data>
+  <data name="AccessRequirement" xml:space="preserve"><value>You need a corporate identity associated with your GitHub EMU account and an active Organization Owner role in at least one delegated organization.</value></data>
+  <data name="ContactAdministrator" xml:space="preserve"><value>Contact the portal administrator to verify the configuration. No budget has been changed.</value></data>
+  <data name="BackToSignIn" xml:space="preserve"><value>Back to sign in</value></data>
+  <data name="OperationIncomplete" xml:space="preserve"><value>Operation not completed</value></data>
+  <data name="Error" xml:space="preserve"><value>Error</value></data>
+  <data name="RequestIncomplete" xml:space="preserve"><value>The request could not be completed</value></data>
+  <data name="InterruptedRequestWarning" xml:space="preserve"><value>Reload the data before retrying a change: GitHub may have received an interrupted request.</value></data>
+  <data name="AdministratorReference" xml:space="preserve"><value>Administrator reference:</value></data>
+  <data name="ReloadBudgets" xml:space="preserve"><value>Reload budgets</value></data>
+  <data name="UserDefaultRequirement" xml:space="preserve"><value>Per-user default requirement</value></data>
+  <data name="GitHubUserDefaultRequirement" xml:space="preserve"><value>GitHub requires the cost center to contain at least one user or team and only users or teams. Organizations and repositories are not supported for this scope.</value></data>
+  <data name="PortalUserDefaultRequirement" xml:space="preserve"><value>This portal only permits cost centers made up of users who are members with a Copilot seat in at least one organization you administer, even if they belong to other organizations. All users in the center must pass authorization and attribution checks. Enterprise teams are excluded: team membership is not yet verified.</value></data>
+  <data name="SharedCenterImpact" xml:space="preserve"><value>The limit applies to each affected person, even if they belong to other organizations. Multiple Organization Owners may therefore have access to the same cost center.</value></data>
+  <data name="UserCenterSetup" xml:space="preserve"><value>Ask the enterprise administrator for a nonempty center containing only authorized licensed users. Organization-containing centers are not supported by this portal; you do not need to change an existing center.</value></data>
+  <data name="GitHubDocumentation" xml:space="preserve"><value>GitHub documentation:</value></data>
+  <data name="UsageBillingBudgets" xml:space="preserve"><value>Budgets for usage-based billing</value></data>
+  <data name="And" xml:space="preserve"><value>and</value></data>
+  <data name="UserTeamCenterBudgets" xml:space="preserve"><value>per-user budgets for cost centers of users or teams</value></data>
+  <data name="DeleteBudget" xml:space="preserve"><value>Delete budget</value></data>
+  <data name="Delete" xml:space="preserve"><value>Delete</value></data>
+  <data name="DeleteWarningTitle" xml:space="preserve"><value>This operation deletes the budget on GitHub.</value></data>
+  <data name="DeleteWarning" xml:space="preserve"><value>It may remove a spending limit. For a user override, the cost-center or enterprise default applies again, if present.</value></data>
+  <data name="Target" xml:space="preserve"><value>Target</value></data>
+  <data name="Scope" xml:space="preserve"><value>Scope</value></data>
+  <data name="MonthlyAmount" xml:space="preserve"><value>Monthly amount</value></data>
+  <data name="DeletionReason" xml:space="preserve"><value>Reason for deletion</value></data>
+  <data name="ConfirmDeletionImpact" xml:space="preserve"><value>I confirm the deletion and its impact on usage limits.</value></data>
+  <data name="DeletePermanently" xml:space="preserve"><value>Delete permanently</value></data>
+  <data name="Cancel" xml:space="preserve"><value>Cancel</value></data>
+  <data name="EditBudget" xml:space="preserve"><value>Edit budget</value></data>
+  <data name="NewBudget" xml:space="preserve"><value>New budget</value></data>
+  <data name="DirectGitHubChange" xml:space="preserve"><value>The change is applied directly on GitHub after permissions are verified.</value></data>
+  <data name="DataMayHaveChanged" xml:space="preserve"><value>The data may have changed.</value></data>
+  <data name="ReloadBeforeEditing" xml:space="preserve"><value>Reload before editing</value></data>
+  <data name="Reference" xml:space="preserve"><value>Reference:</value></data>
+  <data name="BackToBudgets" xml:space="preserve"><value>Back to budgets</value></data>
+  <data name="BudgetConfiguration" xml:space="preserve"><value>Budget configuration</value></data>
+  <data name="ImmutableScope" xml:space="preserve"><value>An existing budget's scope cannot be changed.</value></data>
+  <data name="CostCenterUserDefault" xml:space="preserve"><value>Cost center &#183; per-user default</value></data>
+  <data name="IndividualTotalUsage" xml:space="preserve"><value>Individual user &#183; total usage</value></data>
+  <data name="SelectTarget" xml:space="preserve"><value>Select a target</value></data>
+  <data name="LicensedTargetsHint" xml:space="preserve"><value>Users with a Copilot seat in organizations you administer, even if they are members of other organizations. Cost centers require unambiguous attribution.</value></data>
+  <data name="NoUserOnlyCenters" xml:space="preserve"><value>No authorized user-only cost center is available: a per-user default cannot be created on centers containing organizations.</value></data>
+  <data name="MonthlyAmountUsd" xml:space="preserve"><value>Monthly amount (USD)</value></data>
+  <data name="AmountHint" xml:space="preserve"><value>Amounts in whole US dollars. 1 USD = 100 AI credits. A per-user budget of 0 USD immediately blocks usage.</value></data>
+  <data name="StopAtBudget" xml:space="preserve"><value>Stop usage when the budget is reached</value></data>
+  <data name="StopHint" xml:space="preserve"><value>Always enabled for both supported budget types. Each user's limit includes included and additional AI credit consumption.</value></data>
+  <data name="UsageStopWillBeEnabled" xml:space="preserve"><value>This GitHub budget currently has usage stopping disabled. Saving it here will enable the required usage stop.</value></data>
+  <data name="OptionalExpiration" xml:space="preserve"><value>Override expiration (optional)</value></data>
+  <data name="ExpirationHint" xml:space="preserve"><value>For individual users only. The applicable default resumes on expiration. Leave blank for no expiration.</value></data>
+  <data name="Reason" xml:space="preserve"><value>Reason</value></data>
+  <data name="ReasonExample" xml:space="preserve"><value>For example, a temporary increase for the new service release</value></data>
+  <data name="AuditReasonHint" xml:space="preserve"><value>Recorded in the portal audit log. Do not enter secrets or sensitive data.</value></data>
+  <data name="ConfirmChangeImpact" xml:space="preserve"><value>I confirm that I have verified the target, amount, and impact on user consumption.</value></data>
+  <data name="SaveOnGitHub" xml:space="preserve"><value>Save on GitHub</value></data>
+  <data name="CreateOnGitHub" xml:space="preserve"><value>Create on GitHub</value></data>
+  <data name="BeforeSaving" xml:space="preserve"><value>Before saving</value></data>
+  <data name="PerUserDefault" xml:space="preserve"><value>Per-user default:</value></data>
+  <data name="DefaultHelp" xml:space="preserve"><value>Requires a center containing authorized users only. Caps each member's included and additional consumption, not an amount to divide among users.</value></data>
+  <data name="IndividualOverride" xml:space="preserve"><value>Individual override:</value></data>
+  <data name="OverrideHelp" xml:space="preserve"><value>Caps the person's included and additional Copilot consumption across organizations. An Owner of any organization where the user is a member with a Copilot seat can manage the limit.</value></data>
+  <data name="DeleteLimitWarning" xml:space="preserve"><value>Deletion may remove a spending limit or reactivate a different default.</value></data>
+  <data name="DeleteBudgetAction" xml:space="preserve"><value>Delete budget...</value></data>
+  <data name="DelegatedAdministration" xml:space="preserve"><value>Delegated administration</value></data>
+  <data name="DashboardDescription" xml:space="preserve"><value>Control your teams' AI credits without access to other teams' billing.</value></data>
+  <data name="DataUnavailable" xml:space="preserve"><value>Data unavailable.</value></data>
+  <data name="RetryLoading" xml:space="preserve"><value>Retry loading</value></data>
+  <data name="ManagedOrganizations" xml:space="preserve"><value>Managed organizations</value></data>
+  <data name="OwnerVerified" xml:space="preserve"><value>Owner role verified on GitHub</value></data>
+  <data name="DelegatedCenters" xml:space="preserve"><value>Delegated cost centers</value></data>
+  <data name="BackendAuthorized" xml:space="preserve"><value>Scope authorized by the backend</value></data>
+  <data name="AiCreditBudgets" xml:space="preserve"><value>AI credit budgets</value></data>
+  <data name="ActualGitHubConfiguration" xml:space="preserve"><value>Actual configuration on GitHub</value></data>
+  <data name="BudgetFilters" xml:space="preserve"><value>Budget filters</value></data>
+  <data name="AllBudgets" xml:space="preserve"><value>All budgets</value></data>
+  <data name="YourOrganizations" xml:space="preserve"><value>Your organizations</value></data>
+  <data name="ConnectedAs" xml:space="preserve"><value>Connected as</value></data>
+  <data name="SearchBudgets" xml:space="preserve"><value>Search budgets</value></data>
+  <data name="SearchPlaceholder" xml:space="preserve"><value>Search by cost center or user...</value></data>
+  <data name="Refresh" xml:space="preserve"><value>Refresh</value></data>
+  <data name="NoBudgets" xml:space="preserve"><value>No AI credit budgets configured</value></data>
+  <data name="NoBudgetsDescription" xml:space="preserve"><value>The data has been loaded from GitHub. Create the first budget for one of your delegated scopes.</value></data>
+  <data name="CreateBudget" xml:space="preserve"><value>Create a budget</value></data>
+  <data name="TargetAndScope" xml:space="preserve"><value>Target / Scope</value></data>
+  <data name="MonthlyBudget" xml:space="preserve"><value>Monthly budget</value></data>
+  <data name="Control" xml:space="preserve"><value>Control</value></data>
+  <data name="Actions" xml:space="preserve"><value>Actions</value></data>
+  <data name="ExpiresOn" xml:space="preserve"><value>Expires on</value></data>
+  <data name="PerPerson" xml:space="preserve"><value>per person</value></data>
+  <data name="StopEnabled" xml:space="preserve"><value>Stop enabled</value></data>
+  <data name="NoStop" xml:space="preserve"><value>No stop</value></data>
+  <data name="EditBudgetFor" xml:space="preserve"><value>Edit budget for {0}</value></data>
+  <data name="Edit" xml:space="preserve"><value>Edit</value></data>
+  <data name="NoMatchingBudgets" xml:space="preserve"><value>No budgets match the filters.</value></data>
+  <data name="UpdatedAt" xml:space="preserve"><value>Updated:</value></data>
+  <data name="GitHubBillingSource" xml:space="preserve"><value>Source: GitHub Billing API</value></data>
+  <data name="ScopeCostCenterUsers" xml:space="preserve"><value>Per-user default &#183; Cost center</value></data>
+  <data name="ScopeUser" xml:space="preserve"><value>Individual user</value></data>
+  <data name="BudgetCreated" xml:space="preserve"><value>Budget created on GitHub.</value></data>
+  <data name="BudgetUpdated" xml:space="preserve"><value>Budget updated on GitHub.</value></data>
+  <data name="BudgetDeleted" xml:space="preserve"><value>Budget deleted on GitHub.</value></data>
+  <data name="InvalidLanguageSelection" xml:space="preserve"><value>Select a supported language and a local return page.</value></data>
+  <data name="InvalidScope" xml:space="preserve"><value>Select a valid budget scope.</value></data>
+  <data name="TargetTooLong" xml:space="preserve"><value>The target must not exceed {1} characters.</value></data>
+  <data name="Seleziona una destinazione." xml:space="preserve"><value>Select a target.</value></data>
+  <data name="Inserisci un importo intero in USD, maggiore o uguale a zero." xml:space="preserve"><value>Enter a whole amount in USD greater than or equal to zero.</value></data>
+  <data name="La motivazione e' obbligatoria." xml:space="preserve"><value>A reason is required.</value></data>
+  <data name="La motivazione deve contenere da 5 a 500 caratteri." xml:space="preserve"><value>The reason must contain 5 to 500 characters.</value></data>
+  <data name="Conferma di aver verificato l'impatto della modifica." xml:space="preserve"><value>Confirm that you have verified the impact of the change.</value></data>
+  <data name="Conferma la cancellazione." xml:space="preserve"><value>Confirm the deletion.</value></data>
+  <data name="Budget non trovato nel tuo perimetro autorizzato." xml:space="preserve"><value>Budget not found within your authorized scope.</value></data>
+  <data name="The GitHub API origin is not configured correctly." xml:space="preserve"><value>The GitHub API origin is not configured correctly.</value></data>
+  <data name="A GitHub App installation is not configured." xml:space="preserve"><value>A GitHub App installation is not configured.</value></data>
+  <data name="GitHub App signing credentials are not configured correctly." xml:space="preserve"><value>GitHub App signing credentials are not configured correctly.</value></data>
+  <data name="Invalid GitHub request destination." xml:space="preserve"><value>Invalid GitHub request destination.</value></data>
+  <data name="GitHub reported a conflicting change. Reload and try again." xml:space="preserve"><value>GitHub reported a conflicting change. Reload and try again.</value></data>
+  <data name="GitHub could not complete the request. No successful change was confirmed." xml:space="preserve"><value>GitHub could not complete the request. No successful change was confirmed.</value></data>
+  <data name="GitHub API rate limit reached. Wait before reloading; no successful change was confirmed." xml:space="preserve"><value>GitHub API rate limit reached. Wait before reloading; no successful change was confirmed.</value></data>
+  <data name="GitHub returned an unavailable or invalid response. Reload before retrying a change." xml:space="preserve"><value>GitHub returned an unavailable or invalid response. Reload before retrying a change.</value></data>
+  <data name="GitHub returned incomplete or invalid authorization data." xml:space="preserve"><value>GitHub returned incomplete or invalid authorization data.</value></data>
+  <data name="A budget's scope and target cannot be changed. Delete it and create another budget." xml:space="preserve"><value>A budget's scope and target cannot be changed. Delete it and create another budget.</value></data>
+  <data name="A budget ID and revision are required." xml:space="preserve"><value>A budget ID and revision are required.</value></data>
+  <data name="Choose a valid budget scope and target." xml:space="preserve"><value>Choose a valid budget scope and target.</value></data>
+  <data name="The amount must be a nonnegative whole number of US dollars." xml:space="preserve"><value>The amount must be a nonnegative whole number of US dollars.</value></data>
+  <data name="Individual and per-user default budgets must stop further usage." xml:space="preserve"><value>Individual and per-user default budgets must stop further usage.</value></data>
+  <data name="Only individual budgets can expire, and the expiration must be a future UTC date." xml:space="preserve"><value>Only individual budgets can expire, and the expiration must be a future UTC date.</value></data>
+  <data name="Provide a single-line reason of 5&#8211;500 characters without control characters." xml:space="preserve"><value>Provide a single-line reason of 5 to 500 characters without control characters.</value></data>
+  <data name="Portal delegation is not configured correctly." xml:space="preserve"><value>Portal delegation is not configured correctly.</value></data>
+  <data name="The amount exceeds the administrator-configured limit for this target." xml:space="preserve"><value>The amount exceeds the administrator-configured limit for this target.</value></data>
+  <data name="Il default per utente richiede un cost center composto solo da utenti. Organizzazioni e repository non sono supportati." xml:space="preserve"><value>The per-user default requires a cost center containing users only. Organizations and repositories are not supported.</value></data>
+  <data name="An AI credit budget already exists for this scope and target." xml:space="preserve"><value>An AI credit budget already exists for this scope and target.</value></data>
+  <data name="Unsupported scope." xml:space="preserve"><value>Unsupported scope.</value></data>
+  <data name="You are not authorized to manage this budget or target." xml:space="preserve"><value>You are not authorized to manage this budget or target.</value></data>
+  <data name="This budget changed or was deleted. Reload before making another change." xml:space="preserve"><value>This budget changed or was deleted. Reload before making another change.</value></data>
+  <data name="GitHub non disponibile." xml:space="preserve"><value>GitHub is unavailable.</value></data>
+  <data name="Budget modificato da un altro amministratore." xml:space="preserve"><value>Another administrator changed this budget.</value></data>
+  <data name="Il default per utente richiede un cost center composto solo da utenti." xml:space="preserve"><value>The per-user default requires a cost center containing users only.</value></data>
+  <data name="InvalidFieldValue" xml:space="preserve"><value>The value '{0}' is invalid for {1}.</value></data>
+  <data name="MissingField" xml:space="preserve"><value>A value for {0} is required.</value></data>
+  <data name="MissingValue" xml:space="preserve"><value>A value is required.</value></data>
+  <data name="MissingRequestBody" xml:space="preserve"><value>A request body is required.</value></data>
+  <data name="InvalidValue" xml:space="preserve"><value>The value '{0}' is invalid.</value></data>
+  <data name="InvalidValueGeneral" xml:space="preserve"><value>The supplied value is invalid.</value></data>
+  <data name="NumberRequired" xml:space="preserve"><value>A number is required.</value></data>
+  <data name="InvalidFieldGeneral" xml:space="preserve"><value>The supplied value is invalid for {0}.</value></data>
+  <data name="FieldNumberRequired" xml:space="preserve"><value>{0} must be a number.</value></data>
+  <data name="ApiAuthApp" xml:space="preserve"><value>GitHub App JWT, signed by the backend using the App's private key.</value></data>
+  <data name="ApiAuthEnterprise" xml:space="preserve"><value>Installation access token for the App installed on the enterprise.</value></data>
+  <data name="ApiAuthFirstOrganization" xml:space="preserve"><value>Installation access token for the first organization returned by discovery. The portal still supplies a token although basic user information requires no additional App permission.</value></data>
+  <data name="ApiAuthOrganization" xml:space="preserve"><value>Installation access token for the App installed on the organization in the route.</value></data>
+  <data name="ApiAuthentication" xml:space="preserve"><value>Authentication used</value></data>
+  <data name="ApiAuthenticationDescription" xml:space="preserve"><value>App endpoints use a server-signed RS256 JWT with the App ID as issuer and a nine-minute expiry. Resource endpoints use the discovered enterprise or organization installation's access token. No personal access token, GitHub user OAuth token or browser-provided GitHub token is used.</value></data>
+  <data name="ApiAuthorization" xml:space="preserve"><value>Delegated authorization</value></data>
+  <data name="ApiAuthorizationDescription" xml:space="preserve"><value>The App can access enterprise-wide billing data, but only authorized budgets/destinations reach the browser. Every mutation rechecks identity, ownership and scope-relevant eligibility. Creation/update also validate the amount ceiling and uniqueness. Individual budgets affect the user's consumption across organizations.</value></data>
+  <data name="ApiBaseUrl" xml:space="preserve"><value>API origin</value></data>
+  <data name="ApiBaseUrlDescription" xml:space="preserve"><value>The configured Portal:GitHub:ApiBaseUrl selects GitHub.com or the enterprise's Data Residency API origin. The enterprise placeholder is the enterprise slug; organization and username placeholders are GitHub logins. IDs come from GitHub, not a browser-supplied installation mapping.</value></data>
+  <data name="ApiCaching" xml:space="preserve"><value>Caching</value></data>
+  <data name="ApiCachingDescription" xml:space="preserve"><value>Successful discovery is cached for ten minutes. Tokens are cached until GitHub expiry or one hour, whichever comes first, with a one-minute refresh margin. Identity and Owner roles remain live on every operational request; other inventories are loaded according to the page and budget scope.</value></data>
+  <data name="ApiCallMapDescription" xml:space="preserve"><value>Calls depend on the page, action and stored budget scope. This is an invocation map, not a live request log. Follow an endpoint to inspect its details.</value></data>
+  <data name="ApiCallMapTitle" xml:space="preserve"><value>When are APIs invoked?</value></data>
+  <data name="ApiConfigureBilling" xml:space="preserve"><value>Enterprise: Enterprise billing / Billing - read and write, for cost-center reads and budget reads, creation, updates and deletion.</value></data>
+  <data name="ApiConfigureCopilot" xml:space="preserve"><value>Organization: GitHub Copilot Business - read. This is also referred to as Copilot seat management (organization_copilot_seat_management); it reads existing seats, not license assignments or changes.</value></data>
+  <data name="ApiConfigureInstallations" xml:space="preserve"><value>Enterprise: Enterprise organization installations - read, for organization discovery and validation of existing installations.</value></data>
+  <data name="ApiConfigureMembers" xml:space="preserve"><value>Organization: Members - read, for active owner verification and complete membership inventories.</value></data>
+  <data name="ApiConfigureScim" xml:space="preserve"><value>Enterprise: Enterprise SCIM - read, for the Entra object ID to GitHub EMU identity lookup.</value></data>
+  <data name="ApiContents" xml:space="preserve"><value>On this page</value></data>
+  <data name="ApiConventionsTitle" xml:space="preserve"><value>Authentication, request conventions and safeguards</value></data>
+  <data name="ApiCreateBudgetNotes" xml:space="preserve"><value>Runs only after confirmation, reason, fresh authorization, amount validation and duplicate checks. Cost-center user defaults send the immutable center ID, not its display name. Individual overrides include the user field. Both require usage stopping. A conflict requires reloading, not blind resubmission. Changes are audited; center membership and seats are not modified.</value></data>
+  <data name="ApiCreateBudgetPurpose" xml:space="preserve"><value>Create one authorized monthly AI-credit budget directly on GitHub.</value></data>
+  <data name="ApiCreateBudgetRequest" xml:space="preserve"><value>The common JSON budget payload described below. New alerting is will_alert=false with empty alert_recipients; an individual expiry is included only when selected.</value></data>
+  <data name="ApiCreateBudgetResponse" xml:space="preserve"><value>A successful GitHub response. The portal does not require a top-level budget ID in the creation response; the next dashboard read obtains the persisted budget inventory.</value></data>
+  <data name="ApiCreateTokenNotes" xml:space="preserve"><value>Runs when the relevant installation has no valid cached token. It issues a credential; it does not create an installation or change a budget. A missing token or invalid/too-near expiry is rejected.</value></data>
+  <data name="ApiCreateTokenPurpose" xml:space="preserve"><value>Issue the short-lived installation token used for subsequent enterprise or organization API calls.</value></data>
+  <data name="ApiCreateTokenRequest" xml:space="preserve"><value>The discovered installation_id in the route; a bodyless POST. No permissions or repository subset is requested, so the token inherits the installation's granted access.</value></data>
+  <data name="ApiCreateTokenResponse" xml:space="preserve"><value>token and expires_at. The token remains in backend memory and is never rendered by this page.</value></data>
+  <data name="ApiDeleteBudgetNotes" xml:space="preserve"><value>Runs only after confirmation, reason, fresh access reload and GET-by-ID authorization/fingerprint checks. Deletion is audited and the next dashboard read refreshes the inventory. It does not cancel licenses, remove members or delete cost centers.</value></data>
+  <data name="ApiDeleteBudgetPurpose" xml:space="preserve"><value>Delete one existing authorized budget, not its organization, cost center or user.</value></data>
+  <data name="ApiDeleteBudgetRequest" xml:space="preserve"><value>budget_id in the route; no body or query. The confirmation and reason are portal inputs, not GitHub request fields.</value></data>
+  <data name="ApiDeleteBudgetResponse" xml:space="preserve"><value>A successful GitHub response; an HTTP 204 with no body is accepted.</value></data>
+  <data name="ApiEffectRead" xml:space="preserve"><value>Data reads</value></data>
+  <data name="ApiEffectToken" xml:space="preserve"><value>Token issuance</value></data>
+  <data name="ApiEffectWrite" xml:space="preserve"><value>Budget writes</value></data>
+  <data name="ApiErrors" xml:space="preserve"><value>Failures and concurrency</value></data>
+  <data name="ApiErrorsDescription" xml:space="preserve"><value>At most four GitHub requests are in flight per process, including token issuance and writes. Rate-limited scopes enter a cooldown and return an explicit 502. GitHub 409/412 becomes a 409 conflict; other failures produce explicit errors without raw response bodies or credentials. Fingerprints are optimistic checks, not atomic If-Match transactions. Writes are not automatically retried.</value></data>
+  <data name="ApiExpandHint" xml:space="preserve"><value>Select an endpoint to expand its authentication, minimum permission, request, response and invocation rules. No JavaScript is required.</value></data>
+  <data name="ApiFlowBudgetDetailDescription" xml:space="preserve"><value>Edit/delete confirmation, update and deletion. Read once to select scope dependencies, then reread and authorize. Update/delete also compare the submitted fingerprint.</value></data>
+  <data name="ApiFlowBudgetDetailTitle" xml:space="preserve"><value>Existing budget verification</value></data>
+  <data name="ApiFlowBudgetListDescription" xml:space="preserve"><value>Dashboard, creation and update, including every page for uniqueness checks. Not used by the new-budget form, edit/delete confirmation or deletion.</value></data>
+  <data name="ApiFlowBudgetListTitle" xml:space="preserve"><value>Complete budget inventory</value></data>
+  <data name="ApiFlowCondition" xml:space="preserve"><value>Trigger and conditions</value></data>
+  <data name="ApiFlowDestinationsDescription" xml:space="preserve"><value>Dashboard and new-budget form load members/seats of owned organizations and all active centers. Existing-budget reads and writes load scope-relevant inventories; individual budgets omit centers.</value></data>
+  <data name="ApiFlowDestinationsTitle" xml:space="preserve"><value>Eligible destinations</value></data>
+  <data name="ApiFlowDiscoveryDescription" xml:space="preserve"><value>First operational request, then on expiry of the ten-minute discovery cache. Selects administrator-installed organizations belonging to the configured enterprise. Uninstalled organizations are outside portal scope; their logins remain in the complete isolation inventory. Never installs or updates Apps.</value></data>
+  <data name="ApiFlowDiscoveryTitle" xml:space="preserve"><value>Installation discovery</value></data>
+  <data name="ApiFlowEndpoints" xml:space="preserve"><value>Invoked endpoints</value></data>
+  <data name="ApiFlowIdentityDescription" xml:space="preserve"><value>Every budget page read and mutation: resolve the active EMU, confirm its canonical login and check active Owner membership in the configured enterprise's organizations where the App is installed.</value></data>
+  <data name="ApiFlowIdentityTitle" xml:space="preserve"><value>Live identity and ownership</value></data>
+  <data name="ApiFlowPhase" xml:space="preserve"><value>Phase</value></data>
+  <data name="ApiFlowTokensDescription" xml:space="preserve"><value>Before an installation-scoped call only when its cached token is absent or nearing expiry. This POST issues a token, not a budget or installation.</value></data>
+  <data name="ApiFlowTokensTitle" xml:space="preserve"><value>Installation credentials</value></data>
+  <data name="ApiFlowWritesDescription" xml:space="preserve"><value>Only after a confirmed create, update or delete submission with a reason and successful fresh authorization/validation. Writes are audited and never automatically retried.</value></data>
+  <data name="ApiFlowWritesTitle" xml:space="preserve"><value>Confirmed budget changes</value></data>
+  <data name="ApiGetBudgetNotes" xml:space="preserve"><value>Edit/delete confirmation, update and deletion: identity/ownership first, initial read to select inventories, then fresh read and authorization. Update also verifies the listed record; update/delete compare fingerprints. Missing records yield 404 on display or 409 on mutation; changed/unauthorized targets are denied. No If-Match header is sent.</value></data>
+  <data name="ApiGetBudgetPurpose" xml:space="preserve"><value>Read an existing budget's scope and freshly verify its configuration and authorized target.</value></data>
+  <data name="ApiGetBudgetRequest" xml:space="preserve"><value>Requested budget_id in the route; no body or query. The submitted ID is not trusted as authorization.</value></data>
+  <data name="ApiGetBudgetResponse" xml:space="preserve"><value>A single record with id, type, SKU, scope, target, amount, stop flag, alerting and optional expires_at.</value></data>
+  <data name="ApiGetCenterNotes" xml:space="preserve"><value>Identity/name/state must remain consistent with the list. All active center compositions remain necessary for isolation. Only nonempty, unambiguous centers of authorized licensed direct users are exposed as destinations. Centers containing organizations, enterprise teams, repositories or unknown resources are not default destinations. Direct assignments to foreign/ambiguous centers can exclude user-only defaults.</value></data>
+  <data name="ApiGetCenterPurpose" xml:space="preserve"><value>Read all resources assigned to an active cost center and verify its delegated eligibility.</value></data>
+  <data name="ApiGetCenterRequest" xml:space="preserve"><value>The discovered cost_center_id; per_page=100 and page=1, 2, ...; no body.</value></data>
+  <data name="ApiGetCenterResponse" xml:space="preserve"><value>id, name, state and resources[].type/name; Link and has_next_page determine continuation, with a shorter final page as a fallback.</value></data>
+  <data name="ApiGetMembershipNotes" xml:space="preserve"><value>Only role=admin and state=active grant ownership. A 404 is treated as no membership in that organization. At least one owned organization is required. This checks the current person across organizations, not an enterprise-wide list of every owner.</value></data>
+  <data name="ApiGetMembershipPurpose" xml:space="preserve"><value>Verify whether the signed-in GitHub user is currently an Organization Owner.</value></data>
+  <data name="ApiGetMembershipRequest" xml:space="preserve"><value>Each installed organization belonging to the configured enterprise and the resolved username in the route; no body or query. Uninstalled and other-enterprise organizations are not queried.</value></data>
+  <data name="ApiGetMembershipResponse" xml:space="preserve"><value>role and state from the membership object.</value></data>
+  <data name="ApiGetUserNotes" xml:space="preserve"><value>Runs after the SCIM lookup. The returned login must match the resolved login. A 404 means the identity cannot be authorized. This is not GET /user and does not read an authenticated GitHub user's private profile.</value></data>
+  <data name="ApiGetUserPurpose" xml:space="preserve"><value>Verify that the canonical GitHub login resolved from SCIM identifies a real account.</value></data>
+  <data name="ApiGetUserRequest" xml:space="preserve"><value>The resolved username in the route; no body or query.</value></data>
+  <data name="ApiGetUserResponse" xml:space="preserve"><value>login and a positive numeric id.</value></data>
+  <data name="ApiGroupAccess" xml:space="preserve"><value>EMU identity, organization ownership and Copilot access</value></data>
+  <data name="ApiGroupApp" xml:space="preserve"><value>App authentication and installation tokens</value></data>
+  <data name="ApiGroupBudgets" xml:space="preserve"><value>Budget reads and mutations</value></data>
+  <data name="ApiGroupCenters" xml:space="preserve"><value>Cost-center inventories and resources</value></data>
+  <data name="ApiGroupDiscovery" xml:space="preserve"><value>Read-only enterprise discovery</value></data>
+  <data name="ApiHeaders" xml:space="preserve"><value>Request headers</value></data>
+  <data name="ApiHeadersDescription" xml:space="preserve"><value>The version is configured by Portal:GitHub:ApiVersion; the documentation links here target 2026-03-10. Path segments and query values are URI-encoded. Requests with a JSON body use application/json.</value></data>
+  <data name="ApiListBudgetsNotes" xml:space="preserve"><value>Dashboard, creation and update only. Read every page and verify unique IDs/stable counts. Only authorized BundlePricing / ai_credits cost-center user defaults and individual overrides are exposed. The new-budget form and deletion do not enumerate budgets.</value></data>
+  <data name="ApiListBudgetsPurpose" xml:space="preserve"><value>Populate the authorized dashboard and prevent duplicate scope/target budgets.</value></data>
+  <data name="ApiListBudgetsRequest" xml:space="preserve"><value>The configured enterprise; per_page=100 and page=1, 2, ...; no scope or user filter and no body.</value></data>
+  <data name="ApiListBudgetsResponse" xml:space="preserve"><value>budgets, required has_next_page and optional total_count; each record's id, type, SKU, scope, entity/user, amount, stop flag, alerting and optional expires_at.</value></data>
+  <data name="ApiListCentersNotes" xml:space="preserve"><value>Dashboard, destination form and cost-center budget operations; omitted for individual budgets. Read every active center's full composition to preserve isolation. Unknown states, duplicate IDs and unexpected list pagination fail closed. Centers are never created or modified.</value></data>
+  <data name="ApiListCentersPurpose" xml:space="preserve"><value>Obtain the enterprise's cost-center inventory before determining which centers the owner can administer.</value></data>
+  <data name="ApiListCentersRequest" xml:space="preserve"><value>The configured enterprise; no body or query filter. Deleted centers are excluded locally.</value></data>
+  <data name="ApiListCentersResponse" xml:space="preserve"><value>costCenters with id, name and state.</value></data>
+  <data name="ApiListInstallationsNotes" xml:space="preserve"><value>Require exactly one active installation on the configured enterprise and at least one installed organization belonging to it. Uninstalled organizations are outside portal scope; installations from other enterprises are excluded. Duplicate IDs/logins, suspended in-scope installations and incomplete pagination fail closed.</value></data>
+  <data name="ApiListInstallationsPurpose" xml:space="preserve"><value>Discover the App's existing enterprise and organization installations without maintaining installation IDs.</value></data>
+  <data name="ApiListInstallationsRequest" xml:space="preserve"><value>per_page=100 and page=1, 2, ...; no body. Follows the Link header's next-page indicator.</value></data>
+  <data name="ApiListInstallationsResponse" xml:space="preserve"><value>Installation array: id, target_type, account.slug for enterprises, account.login for organizations and suspended_at.</value></data>
+  <data name="ApiListMembersNotes" xml:space="preserve"><value>After owner verification, enumerate only owned organizations. Members: read covers non-public membership. Duplicate/incomplete inventories fail closed. Shared membership elsewhere does not revoke an otherwise eligible licensed user.</value></data>
+  <data name="ApiListMembersPurpose" xml:space="preserve"><value>Build the complete current membership inventory used to authorize user budgets and attribute cost-center resources.</value></data>
+  <data name="ApiListMembersRequest" xml:space="preserve"><value>Each owned org; per_page=100 and page=1, 2, ...; no body or role filter. Follows the Link next-page indicator.</value></data>
+  <data name="ApiListMembersResponse" xml:space="preserve"><value>An array of member objects; each login is collected.</value></data>
+  <data name="ApiListOrganizationsNotes" xml:space="preserve"><value>Read every enterprise organization, including uninstalled/unowned ones, to preserve complete cost-center attribution. Only the intersection with existing App installations is used for owner/member/seat checks. Empty, duplicate or incomplete enterprise inventories are rejected; missing installations elsewhere do not block installed organizations.</value></data>
+  <data name="ApiListOrganizationsPurpose" xml:space="preserve"><value>Read the complete enterprise organization inventory and match it against administrator-installed Apps.</value></data>
+  <data name="ApiListOrganizationsRequest" xml:space="preserve"><value>The configured enterprise slug; per_page=100 and page=1, 2, ...; no body. Follows the Link next-page indicator.</value></data>
+  <data name="ApiListOrganizationsResponse" xml:space="preserve"><value>An array of organizations; each login is collected into the enterprise inventory.</value></data>
+  <data name="ApiListSeatsNotes" xml:space="preserve"><value>The portal intersects seats with current members, then takes the union across owned organizations. Duplicate assignees and inconsistent/incomplete seat counts are rejected. The official endpoint also accepts Administration: read, but the portal uses the narrower GitHub Copilot Business permission. No Copilot subscription or license is changed.</value></data>
+  <data name="ApiListSeatsPurpose" xml:space="preserve"><value>Read existing Copilot seat assignments to identify licensed members of the owned organizations.</value></data>
+  <data name="ApiListSeatsRequest" xml:space="preserve"><value>Each owned org; per_page=100 and page=1, 2, ...; no body. Follows the Link next-page indicator.</value></data>
+  <data name="ApiListSeatsResponse" xml:space="preserve"><value>seats[].assignee.login and optional total_seats; seats with no assignee are not user destinations.</value></data>
+  <data name="ApiMetricEndpoints" xml:space="preserve"><value>Runtime endpoints</value></data>
+  <data name="ApiMetricHint" xml:space="preserve"><value>These counts identify distinct method/path operations, not requests per page. Pagination, organization/resource counts and cache hits determine the actual number of calls.</value></data>
+  <data name="ApiOfficialDocs" xml:space="preserve"><value>Official endpoint documentation</value></data>
+  <data name="ApiOr" xml:space="preserve"><value>or</value></data>
+  <data name="ApiOverview" xml:space="preserve"><value>Integration at a glance</value></data>
+  <data name="ApiPayloadAlerting" xml:space="preserve"><value>New budgets send will_alert=false and alert_recipients=[]. Updates preserve the alerting object from the current GitHub budget instead of overwriting recipients.</value></data>
+  <data name="ApiPayloadAmount" xml:space="preserve"><value>budget_amount is a nonnegative whole monthly USD amount per user within the configured maximum, not a credit count (1 USD = 100 AI credits). It covers included and additional consumption. prevent_further_usage must always be true.</value></data>
+  <data name="ApiPayloadDescription" xml:space="preserve"><value>These are the fields the portal sends, not the entire GitHub schema. Some integration details are stricter than, or clarified beyond, the generated REST schema.</value></data>
+  <data name="ApiPayloadExpiry" xml:space="preserve"><value>Only an individual user override can have an expiry. A selected future UTC date is sent as yyyy-MM-dd; it is omitted on creation when absent. On user updates, null explicitly removes an existing expiry.</value></data>
+  <data name="ApiPayloadProduct" xml:space="preserve"><value>Other products, repository budgets and enterprise-wide budgets are outside the portal's mutation scope.</value></data>
+  <data name="ApiPayloadReason" xml:space="preserve"><value>The required reason and Entra/GitHub actor identity are recorded in backend audit logs; they are not fields in the GitHub budget payload. No secret, token or live enterprise inventory is included in this reference.</value></data>
+  <data name="ApiPayloadScopes" xml:space="preserve"><value>Cost-center per-user default and individual override only. Both cap each user's included and additional consumption. Individual limits affect consumption across organizations.</value></data>
+  <data name="ApiPayloadTarget" xml:space="preserve"><value>Cost-center user defaults send the immutable center ID, even when reads return a name. For individual overrides, budget_entity_name is empty and the separate user field contains the GitHub login.</value></data>
+  <data name="ApiPayloadTitle" xml:space="preserve"><value>Budget payload used by POST and PATCH</value></data>
+  <data name="ApiPermission" xml:space="preserve"><value>Minimum App permission</value></data>
+  <data name="ApiPermissionApp" xml:space="preserve"><value>No separately assigned resource permission. This endpoint requires App JWT authentication, not an installation token.</value></data>
+  <data name="ApiPermissionBillingRead" xml:space="preserve"><value>Enterprise / Enterprise billing: read.</value></data>
+  <data name="ApiPermissionBillingWrite" xml:space="preserve"><value>Enterprise / Enterprise billing: write.</value></data>
+  <data name="ApiPermissionCopilot" xml:space="preserve"><value>Organization / GitHub Copilot Business (Copilot seat management): read.</value></data>
+  <data name="ApiPermissionInstallationsRead" xml:space="preserve"><value>Enterprise / Enterprise organization installations: read.</value></data>
+  <data name="ApiPermissionMembers" xml:space="preserve"><value>Organization / Members: read.</value></data>
+  <data name="ApiPermissionPublic" xml:space="preserve"><value>No additional App permission for the basic metadata fields consumed. This does not imply access to private details or organization plan information.</value></data>
+  <data name="ApiPermissionScim" xml:space="preserve"><value>Enterprise / Enterprise SCIM: read.</value></data>
+  <data name="ApiPermissionsApproval" xml:space="preserve"><value>The administrator installs the App on the enterprise and only the organizations to include in portal scope, without repository permissions. At least one in-enterprise organization installation is required. Uninstalled organizations are excluded; suspended in-scope installations fail explicitly. Approve changed permissions on existing installations; discovery is cached for ten minutes, or the application can be restarted.</value></data>
+  <data name="ApiPermissionsDescription" xml:space="preserve"><value>The following are the required App settings, not a live audit of your installation. Each operation below lists its minimum permission; read and write also covers read-only operations. App permissions authorize the backend, not the signed-in owner: the portal separately enforces delegated access.</value></data>
+  <data name="ApiPermissionsTitle" xml:space="preserve"><value>Permissions to configure in the GitHub App</value></data>
+  <data name="ApiPortalBehavior" xml:space="preserve"><value>When used and important behavior</value></data>
+  <data name="ApiReadOnlyDescription" xml:space="preserve"><value>Opening this page requires sign-in but does not load enterprise data, discover installations, issue tokens or change budgets. All routes use placeholders, not your configured identifiers or credentials.</value></data>
+  <data name="ApiReadOnlyTitle" xml:space="preserve"><value>Documentation only: no GitHub requests</value></data>
+  <data name="ApiReferenceIntro" xml:space="preserve"><value>All {0} GitHub REST operations used by the portal, their authentication, App permissions and integration behavior.</value></data>
+  <data name="ApiReferenceScope" xml:space="preserve"><value>This inventory covers the server's runtime GitHub REST calls. Microsoft Entra ID sign-in uses OpenID Connect, not a GitHub App permission. Azure provisioning and deployment scripts are outside this runtime inventory. The portal does not call GraphQL, create cost centers or assign Copilot licenses.</value></data>
+  <data name="ApiReferenceTitle" xml:space="preserve"><value>API reference</value></data>
+  <data name="ApiRequest" xml:space="preserve"><value>Request used by the portal</value></data>
+  <data name="ApiResponse" xml:space="preserve"><value>Response data consumed</value></data>
+  <data name="ApiScimUsersNotes" xml:space="preserve"><value>Runs on each access reload. Requires exactly one result matching oid with active=true. A profileUrl must be a valid single-account HTTPS URL on the configured GitHub host. No email/display-name mapping is used and no SCIM user is provisioned or modified. The endpoint supports installation tokens with Enterprise SCIM: read.</value></data>
+  <data name="ApiScimUsersPurpose" xml:space="preserve"><value>Resolve the signed-in corporate identity to one active GitHub Enterprise Managed User.</value></data>
+  <data name="ApiScimUsersRequest" xml:space="preserve"><value>filter=externalId eq "ENTRA_OBJECT_ID", URI-encoded from the authenticated oid claim; no body. This is the enterprise SCIM Users endpoint, not organization SCIM.</value></data>
+  <data name="ApiScimUsersResponse" xml:space="preserve"><value>totalResults and Resources; externalId, active, profileUrl and, as a fallback when profileUrl is absent, userName.</value></data>
+  <data name="ApiUpdateBudgetNotes" xml:space="preserve"><value>Runs after a fresh access reload, GET by ID, fingerprint comparison, authorization, amount and duplicate checks. Scope and target cannot be changed: delete and create instead. Existing alert recipients/settings are preserved. Individual budgets must retain usage stopping. Changes are audited.</value></data>
+  <data name="ApiUpdateBudgetPurpose" xml:space="preserve"><value>Change the amount, usage-stop setting or permitted individual expiry of an existing authorized budget.</value></data>
+  <data name="ApiUpdateBudgetRequest" xml:space="preserve"><value>budget_id and the common JSON payload below, preserving current budget_alerting. Cost centers use immutable IDs. User expiry is explicitly null when removing it.</value></data>
+  <data name="ApiUpdateBudgetResponse" xml:space="preserve"><value>A successful GitHub response; the next dashboard read refreshes the budget configuration.</value></data>
+</root>

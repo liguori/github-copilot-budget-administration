@@ -1,0 +1,15 @@
+@page
+@model LoginModel
+@{
+    ViewData["Title"] = L["SignIn"];
+}
+<section class="login-card panel">
+    <div class="login-symbol" aria-hidden="true">&lt;/&gt;</div>
+    <span class="eyebrow">COPILOT BUDGET ADMINISTRATION</span>
+    <h1>@L["TeamBudgets"]<br />@L["OnePlace"]</h1>
+    <p class="muted">@L["LoginDescription"]</p>
+    <form method="post">
+        <button type="submit" class="button button-primary button-wide">@L["SignInWithEntra"] <span aria-hidden="true">&#8594;</span></button>
+    </form>
+    <p class="login-note">@L["AuthorizedOwnersOnly"]<br />@L["PermissionsCheckedLive"]</p>
+</section>

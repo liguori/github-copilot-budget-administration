@@ -1,0 +1,134 @@
+@page
+@model BudgetPortal.Pages.ApiReferenceModel
+@{
+    ViewData["Title"] = L["ApiReferenceTitle"];
+    var operations = ApiReferenceModel.Operations;
+    var groups = operations.GroupBy(operation => operation.GroupKey).ToArray();
+}
+
+<header class="api-hero">
+    <span class="api-eyebrow">GitHub REST API</span>
+    <h1>@L["ApiReferenceTitle"]</h1>
+    <p>@L["ApiReferenceIntro", operations.Count]</p>
+    <div class="api-readonly">
+        <span class="badge badge-success">@L["ApiReadOnlyTitle"]</span>
+        <p>@L["ApiReadOnlyDescription"]</p>
+    </div>
+</header>
+
+<div class="api-metrics" aria-label="@L["ApiOverview"]">
+    <div><strong>@operations.Count</strong><span>@L["ApiMetricEndpoints"]</span></div>
+    <div><strong>@operations.Count(operation => operation.Method == "GET")</strong><span>@L["ApiEffectRead"]</span></div>
+    <div><strong>@operations.Count(operation => operation.EffectKey == "ApiEffectToken")</strong><span>@L["ApiEffectToken"]</span></div>
+    <div><strong>@operations.Count(operation => operation.IsBudgetWrite)</strong><span>@L["ApiEffectWrite"]</span></div>
+</div>
+<p class="api-catalog-hint">@L["ApiMetricHint"]</p>
+
+<nav class="api-contents" aria-label="@L["ApiContents"]">
+    <a href="#api-call-map">@L["ApiCallMapTitle"]</a>
+    @foreach (var group in groups)
+    {
+        <a href="#@group.Key">@L[group.Key] <span class="badge">@group.Count()</span></a>
+    }
+    <a href="#api-budget-payload">@L["ApiPayloadTitle"]</a>
+</nav>
+
+<section id="api-call-map" class="panel api-section" aria-labelledby="api-call-map-title">
+    <h2 id="api-call-map-title">@L["ApiCallMapTitle"]</h2>
+    <p class="muted">@L["ApiCallMapDescription"]</p>
+    <div class="table-scroll">
+        <table class="api-flow-table">
+            <thead><tr><th scope="col">@L["ApiFlowPhase"]</th><th scope="col">@L["ApiFlowCondition"]</th><th scope="col">@L["ApiFlowEndpoints"]</th></tr></thead>
+            <tbody>
+                @foreach (var flow in ApiReferenceModel.CallFlows)
+                {
+                    <tr>
+                        <th scope="row">@L[flow.TitleKey]</th>
+                        <td>@L[flow.DescriptionKey]</td>
+                        <td>
+                            @foreach (var id in flow.OperationIds)
+                            {
+                                var operation = operations.Single(operation => operation.Id == id);
+                                <a href="#@id"><span class="api-method api-method-@operation.Method.ToLowerInvariant()">@operation.Method</span> <code>@operation.Path</code></a>
+                            }
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</section>
+
+<div class="api-overview-grid">
+    <details class="panel api-section">
+        <summary><h2>@L["ApiPermissionsTitle"]</h2></summary>
+        <p>@L["ApiPermissionsDescription"]</p>
+        <ul class="api-permissions">
+            <li>@L["ApiConfigureBilling"]</li>
+            <li>@L["ApiConfigureInstallations"]</li>
+            <li>@L["ApiConfigureScim"]</li>
+            <li>@L["ApiConfigureMembers"]</li>
+            <li>@L["ApiConfigureCopilot"]</li>
+        </ul>
+        <p class="muted">@L["ApiPermissionsApproval"]</p>
+    </details>
+    <details class="panel api-section">
+        <summary><h2>@L["ApiConventionsTitle"]</h2></summary>
+        <dl class="api-facts">
+            <dt>@L["ApiBaseUrl"]</dt>
+            <dd><code>https://api.github.com/</code> @L["ApiOr"] <code>https://api.{subdomain}.ghe.com/</code>. @L["ApiBaseUrlDescription"]</dd>
+            <dt>@L["ApiHeaders"]</dt>
+            <dd><code>Authorization: Bearer {JWT/token}</code>, <code>Accept: application/vnd.github+json</code>,
+                <code>X-GitHub-Api-Version</code>, <code>User-Agent: BudgetPortal/1.0</code>. @L["ApiHeadersDescription"]</dd>
+            <dt>@L["ApiAuthentication"]</dt><dd>@L["ApiAuthenticationDescription"]</dd>
+            <dt>@L["ApiCaching"]</dt><dd>@L["ApiCachingDescription"]</dd>
+            <dt>@L["ApiAuthorization"]</dt><dd>@L["ApiAuthorizationDescription"]</dd>
+            <dt>@L["ApiErrors"]</dt><dd>@L["ApiErrorsDescription"]</dd>
+        </dl>
+    </details>
+</div>
+
+<p class="api-catalog-hint">@L["ApiExpandHint"]</p>
+@foreach (var group in groups)
+{
+    <section class="api-group" aria-labelledby="@group.Key">
+        <div class="api-group-heading"><h2 id="@group.Key">@L[group.Key]</h2><span class="badge">@group.Count()</span></div>
+        @foreach (var operation in group)
+        {
+            <details id="@operation.Id" class="panel api-operation" data-api-method="@operation.Method" data-api-path="@operation.Path">
+                <summary>
+                    <span class="api-method api-method-@operation.Method.ToLowerInvariant()">@operation.Method</span>
+                    <span class="api-operation-heading"><code>@operation.Path</code><span>@L[operation.PurposeKey]</span></span>
+                    <span class="badge">@L[operation.EffectKey]</span>
+                </summary>
+                <div class="api-operation-body">
+                    <dl class="api-facts">
+                        <dt>@L["ApiAuthentication"]</dt><dd>@L[operation.AuthenticationKey]</dd>
+                        <dt>@L["ApiPermission"]</dt><dd>@L[operation.PermissionKey]</dd>
+                        <dt>@L["ApiRequest"]</dt><dd>@L[operation.RequestKey]</dd>
+                        <dt>@L["ApiResponse"]</dt><dd>@L[operation.ResponseKey]</dd>
+                        <dt>@L["ApiPortalBehavior"]</dt><dd>@L[operation.NotesKey]</dd>
+                    </dl>
+                    <a href="@operation.DocumentationUrl">@L["ApiOfficialDocs"]</a>
+                </div>
+            </details>
+        }
+    </section>
+}
+
+<section id="api-budget-payload" class="panel api-section" aria-labelledby="api-budget-payload-title">
+    <h2 id="api-budget-payload-title">@L["ApiPayloadTitle"]</h2>
+    <p class="muted">@L["ApiPayloadDescription"]</p>
+    <dl class="api-facts">
+        <dt><code>budget_type</code> / <code>budget_product_sku</code></dt>
+        <dd><code>BundlePricing</code> / <code>ai_credits</code>. @L["ApiPayloadProduct"]</dd>
+        <dt><code>budget_scope</code></dt>
+        <dd><code>multi_user_cost_center</code>, <code>user</code>. @L["ApiPayloadScopes"]</dd>
+        <dt><code>budget_entity_name</code> / <code>user</code></dt><dd>@L["ApiPayloadTarget"]</dd>
+        <dt><code>budget_amount</code> / <code>prevent_further_usage</code></dt><dd>@L["ApiPayloadAmount"]</dd>
+        <dt><code>budget_alerting</code></dt><dd>@L["ApiPayloadAlerting"]</dd>
+        <dt><code>expires_at</code></dt><dd>@L["ApiPayloadExpiry"]</dd>
+    </dl>
+    <p class="muted">@L["ApiPayloadReason"]</p>
+</section>
+<p class="api-catalog-hint">@L["ApiReferenceScope"]</p>

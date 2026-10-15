@@ -1,0 +1,102 @@
+@page
+@model IndexModel
+@{
+    ViewData["Title"] = L["Budgets"];
+}
+<div class="page-heading">
+    <div>
+        <div class="breadcrumb">Enterprise <span>/</span> @L["DelegatedAdministration"]</div>
+        <h1>@L["Budgets"]</h1>
+        <p class="muted">@L["DashboardDescription"]</p>
+    </div>
+    @if (Model.Dashboard is not null)
+    {
+        <a asp-page="/Budgets/Edit" class="button button-primary"><span aria-hidden="true">+</span> @L["NewBudget"]</a>
+    }
+</div>
+@if (Model.Notice is not null)
+{
+    <div class="flash flash-success" role="status">@L[Model.Notice]</div>
+}
+@if (Model.ErrorMessage is not null)
+{
+    <div class="flash flash-error" role="alert">
+        <strong>@L["DataUnavailable"]</strong> @L[Model.ErrorMessage]
+        <a asp-page="/Index">@L["RetryLoading"]</a>
+        <div class="muted">@L["Reference"] @HttpContext.TraceIdentifier</div>
+    </div>
+}
+@if (Model.Dashboard != null)
+{
+    var dashboard = Model.Dashboard;
+    <div class="stats-grid">
+        <section class="stat-card"><span>@L["ManagedOrganizations"]</span><strong>@dashboard.Organizations.Count</strong><small>@L["OwnerVerified"]</small></section>
+        <section class="stat-card"><span>@L["DelegatedCenters"]</span><strong>@dashboard.CostCenters.Count</strong><small>@L["BackendAuthorized"]</small></section>
+        <section class="stat-card"><span>@L["AiCreditBudgets"]</span><strong>@dashboard.Budgets.Count</strong><small>@L["ActualGitHubConfiguration"]</small></section>
+    </div>
+    <div class="content-grid">
+        <aside class="sidebar" aria-label="@L["BudgetFilters"]">
+            <h2>@L["Scope"]</h2>
+            <button class="scope-filter selected" type="button" data-scope="all" aria-pressed="true">@L["AllBudgets"] <span>@dashboard.Budgets.Count</span></button>
+            @foreach (var scope in Enum.GetValues<BudgetScope>())
+            {
+                <button class="scope-filter" type="button" data-scope="@scope" aria-pressed="false">
+                    @L[IndexModel.ScopeLabel(scope)] <span>@dashboard.Budgets.Count(b => b.Scope == scope)</span>
+                </button>
+            }
+            <div class="sidebar-section">
+                <h2>@L["YourOrganizations"]</h2>
+                @foreach (var organization in dashboard.Organizations)
+                {
+                    <div class="org-label"><span class="org-avatar" aria-hidden="true">@organization[..1].ToUpperInvariant()</span>@organization</div>
+                }
+            </div>
+            <div class="sidebar-note">@L["ConnectedAs"] <strong>@dashboard.GitHubLogin</strong></div>
+        </aside>
+        <div class="budget-content">
+            <div class="panel budgets-panel">
+                <div class="panel-toolbar">
+                    <label class="search-label"><span class="sr-only">@L["SearchBudgets"]</span><input id="budget-search" type="search" placeholder="@L["SearchPlaceholder"]" autocomplete="off" /></label>
+                    <a class="button button-small" asp-page="/Index">@L["Refresh"]</a>
+                </div>
+                @if (dashboard.Budgets.Count == 0)
+                {
+                    <div class="empty-state">
+                        <div class="empty-icon" aria-hidden="true">&#9707;</div>
+                        <h2>@L["NoBudgets"]</h2>
+                        <p>@L["NoBudgetsDescription"]</p>
+                        <a class="button button-primary" asp-page="/Budgets/Edit">@L["CreateBudget"]</a>
+                    </div>
+                }
+                else
+                {
+                    <div class="table-scroll">
+                        <table class="budget-table">
+                            <thead><tr><th scope="col">@L["TargetAndScope"]</th><th scope="col">@L["MonthlyBudget"]</th><th scope="col">@L["Control"]</th><th scope="col"><span class="sr-only">@L["Actions"]</span></th></tr></thead>
+                            <tbody>
+                            @foreach (var budget in dashboard.Budgets)
+                            {
+                                <tr data-budget-row data-scope="@budget.Scope" data-search="@($"{Model.TargetLabel(budget)} {budget.Target} {L[IndexModel.ScopeLabel(budget.Scope)]}")">
+                                    <td><strong>@Model.TargetLabel(budget)</strong><div class="cell-subtitle">@L[IndexModel.ScopeLabel(budget.Scope)]</div>
+                                        @if (budget.ExpiresAt is { } expires)
+                                        {
+                                            <div class="cell-subtitle">@L["ExpiresOn"] @expires.ToString("d", CultureInfo.CurrentCulture)</div>
+                                        }
+                                    </td>
+                                    <td class="numeric"><strong>@IndexModel.Money(budget.Amount)</strong>
+                                        <div class="cell-subtitle">@L["PerPerson"]</div>
+                                    </td>
+                                    <td><span class="badge @(budget.PreventFurtherUsage ? "badge-success" : "badge-warning")">@L[budget.PreventFurtherUsage ? "StopEnabled" : "NoStop"]</span></td>
+                                    <td class="row-actions"><a asp-page="/Budgets/Edit" asp-route-id="@budget.Id" class="button button-small" aria-label="@L["EditBudgetFor", Model.TargetLabel(budget)]">@L["Edit"]</a></td>
+                                </tr>
+                            }
+                            </tbody>
+                        </table>
+                    </div>
+                    <p id="no-results" class="empty-state" hidden>@L["NoMatchingBudgets"]</p>
+                }
+                <div class="panel-footer">@L["UpdatedAt"] @dashboard.RetrievedAt.ToString("G", CultureInfo.CurrentCulture) UTC · @L["GitHubBillingSource"]</div>
+            </div>
+        </div>
+    </div>
+}

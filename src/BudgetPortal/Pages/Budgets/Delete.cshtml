@@ -1,0 +1,24 @@
+@page
+@model DeleteModel
+@{
+    ViewData["Title"] = L["DeleteBudget"];
+}
+<div class="page-heading"><div><div class="breadcrumb"><a asp-page="/Index">@L["Budgets"]</a><span>/</span>@L["Delete"]</div><h1>@L["DeleteBudget"]</h1></div></div>
+@if (Model.ErrorMessage is not null)
+{
+    <div class="flash flash-error" role="alert">@L[Model.ErrorMessage] <a asp-page="/Index">@L["ReloadBudgets"]</a></div>
+}
+@if (Model.Budget != null && !Model.Stale)
+{
+    var budget = Model.Budget;
+    <form method="post" class="panel budget-form delete-form">
+        <input type="hidden" asp-for="Id" />
+        <input type="hidden" asp-for="Fingerprint" />
+        <div asp-validation-summary="All" class="validation-summary" role="alert"></div>
+        <div class="flash flash-warning"><strong>@L["DeleteWarningTitle"]</strong> @L["DeleteWarning"]</div>
+        <dl class="budget-details"><dt>@L["Target"]</dt><dd>@budget.Target</dd><dt>@L["Scope"]</dt><dd>@L[IndexModel.ScopeLabel(budget.Scope)]</dd><dt>@L["MonthlyAmount"]</dt><dd>@IndexModel.Money(budget.Amount)</dd></dl>
+        <div class="field"><label asp-for="Reason">@L["DeletionReason"]</label><input asp-for="Reason" minlength="5" maxlength="500" required /></div>
+        <div class="field checkbox-field"><label><input asp-for="Confirmed" required /> @L["ConfirmDeletionImpact"]</label></div>
+        <div class="form-actions"><button type="submit" class="button button-danger">@L["DeletePermanently"]</button><a asp-page="/Index" class="button">@L["Cancel"]</a></div>
+    </form>
+}

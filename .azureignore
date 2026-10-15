@@ -1,0 +1,10 @@
+.azure/
+.git/
+**/bin/
+**/obj/
+scripts/
+infra/
+docs/
+**/*.pem
+**/*.key
+**/*local*.json

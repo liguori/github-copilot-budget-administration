@@ -1,0 +1,12 @@
+@page
+@model AccessDeniedModel
+@{
+    ViewData["Title"] = L["AccessDenied"];
+}
+<section class="panel empty-state">
+    <span class="badge badge-warning">@L["RestrictedAccess"]</span>
+    <h1>@L["NoPortalAccess"]</h1>
+    <p>@L["AccessRequirement"]</p>
+    <p class="muted">@L["ContactAdministrator"]</p>
+    <a asp-page="/Login" class="button">@L["BackToSignIn"]</a>
+</section>

@@ -1,0 +1,12 @@
+@page
+@model ErrorModel
+@{
+    ViewData["Title"] = L["OperationIncomplete"];
+}
+<section class="panel empty-state">
+    <span class="badge badge-warning">@L["Error"]</span>
+    <h1>@L["RequestIncomplete"]</h1>
+    <p>@L["InterruptedRequestWarning"]</p>
+    <p class="muted">@L["AdministratorReference"] <code>@Model.TraceId</code></p>
+    <a class="button" asp-page="/Index">@L["ReloadBudgets"]</a>
+</section>

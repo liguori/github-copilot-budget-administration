@@ -1,0 +1,130 @@
+@page
+@model EditModel
+@{
+    ViewData["Title"] = L[Model.IsEdit ? "EditBudget" : "NewBudget"];
+}
+<div class="page-heading">
+    <div><div class="breadcrumb"><a asp-page="/Index">@L["Budgets"]</a><span>/</span>@ViewData["Title"]</div>
+    <h1>@ViewData["Title"]</h1><p class="muted">@L["DirectGitHubChange"]</p></div>
+</div>
+@if (Model.ErrorMessage is not null)
+{
+    <div class="flash flash-error" role="alert">@L[Model.ErrorMessage]
+        @if (Model.Input.Scope == BudgetScope.CostCenterUsers)
+        {
+            <partial name="_CostCenterUserRequirements" />
+        }
+        @if (Model.Stale)
+        {
+            <p>@L["DataMayHaveChanged"] <a asp-page="/Budgets/Edit" asp-route-id="@Model.Id">@L["ReloadBeforeEditing"]</a>.</p>
+        }
+        <div class="muted">@L["Reference"] @HttpContext.TraceIdentifier</div>
+    </div>
+    <p><a asp-page="/Index">@L["BackToBudgets"]</a></p>
+}
+@if ((Model.Existing != null || Model.Dashboard != null) && !Model.Stale)
+{
+    var dashboard = Model.Dashboard;
+    <div class="form-grid">
+        <form method="post" class="panel budget-form" id="budget-form">
+            <div asp-validation-summary="All" class="validation-summary" role="alert"></div>
+            <input type="hidden" asp-for="Id" />
+            <input type="hidden" asp-for="Fingerprint" />
+            <h2>@L["BudgetConfiguration"]</h2>
+            <div class="field">
+                <label asp-for="Input.Scope">@L["Scope"]</label>
+                @if (Model.IsEdit)
+                {
+                    <input type="hidden" asp-for="Input.Scope" />
+                    <p class="readonly-value">@L[IndexModel.ScopeLabel(Model.Input.Scope)]</p>
+                    <small>@L["ImmutableScope"]</small>
+                }
+                else
+                {
+                    <select asp-for="Input.Scope">
+                        <option value="CostCenterUsers">@L["CostCenterUserDefault"]</option>
+                        <option value="User">@L["IndividualTotalUsage"]</option>
+                    </select>
+                }
+            </div>
+            <div id="cost-center-user-requirements" class="notice-box" role="note" hidden="@(Model.Input.Scope != BudgetScope.CostCenterUsers)">
+                <partial name="_CostCenterUserRequirements" />
+            </div>
+            <div class="field">
+                <label asp-for="Input.Target">@L["Target"]</label>
+                @if (Model.IsEdit)
+                {
+                    <input type="hidden" asp-for="Input.Target" />
+                    <p class="readonly-value">@Model.Input.Target</p>
+                }
+                else if (dashboard is not null)
+                {
+                    <select asp-for="Input.Target" required>
+                        <option value="">@L["SelectTarget"]</option>
+                        @foreach (var center in dashboard.CostCenters)
+                        {
+                            <option value="@center.Id" data-for-scope="CostCenterUsers">@center.Name</option>
+                        }
+                        @foreach (var user in dashboard.Users)
+                        {
+                            <option value="@user" data-for-scope="User">@user</option>
+                        }
+                    </select>
+                    <small>@L["LicensedTargetsHint"]</small>
+                    @if (dashboard.CostCenters.Count == 0)
+                    {
+                        <small>@L["NoUserOnlyCenters"]</small>
+                    }
+                }
+                <span asp-validation-for="Input.Target"></span>
+            </div>
+            <div class="field">
+                <label asp-for="Input.Amount">@L["MonthlyAmountUsd"]</label>
+                <input asp-for="Input.Amount" type="number" min="0" step="1" inputmode="numeric" required />
+                <small>@L["AmountHint"]</small>
+                <span asp-validation-for="Input.Amount"></span>
+            </div>
+            <div class="field">
+                <input type="hidden" name="Input.PreventFurtherUsage" value="true" />
+                <span class="badge badge-success">@L["StopAtBudget"]</span>
+                <small>@L["StopHint"]</small>
+                @if (Model.Existing is { PreventFurtherUsage: false })
+                {
+                    <p class="flash flash-warning" role="alert">@L["UsageStopWillBeEnabled"]</p>
+                }
+                <span asp-validation-for="Input.PreventFurtherUsage"></span>
+            </div>
+            <div class="field" id="expiration-field">
+                <label asp-for="Input.ExpiresAt">@L["OptionalExpiration"]</label>
+                <input asp-for="Input.ExpiresAt" type="date" />
+                <small>@L["ExpirationHint"]</small>
+            </div>
+            <div class="field">
+                <label asp-for="Input.Reason">@L["Reason"]</label>
+                <input asp-for="Input.Reason" maxlength="500" minlength="5" placeholder="@L["ReasonExample"]" required />
+                <small>@L["AuditReasonHint"]</small>
+                <span asp-validation-for="Input.Reason"></span>
+            </div>
+            <div class="field checkbox-field confirmation">
+                <label><input asp-for="Input.Confirmed" required /> @L["ConfirmChangeImpact"]</label>
+            </div>
+            <div class="form-actions">
+                <button class="button button-primary" type="submit">@L[Model.IsEdit ? "SaveOnGitHub" : "CreateOnGitHub"]</button>
+                <a class="button" asp-page="/Index">@L["Cancel"]</a>
+            </div>
+        </form>
+        <aside class="form-help">
+            <h3>@L["BeforeSaving"]</h3>
+            <p><strong>@L["PerUserDefault"]</strong> @L["DefaultHelp"]</p>
+            <p><strong>@L["IndividualOverride"]</strong> @L["OverrideHelp"]</p>
+            @if (Model.IsEdit)
+            {
+                <div class="danger-zone">
+                    <h3>@L["DeleteBudget"]</h3>
+                    <p>@L["DeleteLimitWarning"]</p>
+                    <a class="button button-danger" asp-page="/Budgets/Delete" asp-route-id="@Model.Id">@L["DeleteBudgetAction"]</a>
+                </div>
+            }
+        </aside>
+    </div>
+}

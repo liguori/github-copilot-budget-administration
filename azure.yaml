@@ -1,0 +1,42 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/Azure/azure-dev/main/schemas/v1.0/azure.yaml.json
+name: gh-copilot-budget-administration
+metadata:
+  template: gh-copilot-budget-administration
+services:
+  web:
+    project: ./src/BudgetPortal
+    language: dotnet
+    host: appservice
+hooks:
+  preup:
+    posix:
+      interactive: true
+      shell: sh
+      run: python3 scripts/deploy.py prepare
+    windows:
+      interactive: true
+      shell: pwsh
+      run: python scripts/deploy.py prepare; exit $LASTEXITCODE
+  preprovision:
+    posix:
+      interactive: true
+      shell: sh
+      run: python3 scripts/deploy.py prepare
+    windows:
+      interactive: true
+      shell: pwsh
+      run: python scripts/deploy.py prepare; exit $LASTEXITCODE
+  postprovision:
+    posix:
+      shell: sh
+      run: python3 scripts/deploy.py redirects
+    windows:
+      shell: pwsh
+      run: python scripts/deploy.py redirects; exit $LASTEXITCODE
+  postdeploy:
+    posix:
+      shell: sh
+      run: python3 scripts/deploy.py verify
+    windows:
+      shell: pwsh
+      run: python scripts/deploy.py verify; exit $LASTEXITCODE

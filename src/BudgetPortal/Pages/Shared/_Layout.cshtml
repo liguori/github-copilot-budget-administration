@@ -1,0 +1,57 @@
+@{
+    var isApiReference = ViewContext.RouteData.Values["page"]?.ToString() == "/ApiReference";
+}
+<!DOCTYPE html>
+<html lang="@CultureInfo.CurrentUICulture.TwoLetterISOLanguageName">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="color-scheme" content="light dark" />
+    <title>@ViewData["Title"] · Copilot Budget Administration</title>
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+</head>
+<body data-loading-text="@L["Working"]">
+    <a class="skip-link" href="#main">@L["SkipToContent"]</a>
+    <header class="topbar">
+        <a class="brand" asp-page="/Index" aria-label="@L["BrandHome"]">
+            <span class="brand-icon" aria-hidden="true">&lt;/&gt;</span>
+            <span>Copilot <span class="brand-muted">/</span> <strong>Budget Administration</strong></span>
+        </a>
+        <div class="account">
+            <form method="post" asp-page="/Language" class="language-picker">
+                <input type="hidden" name="ReturnUrl" value="@($"{Context.Request.PathBase}{Context.Request.Path}{Context.Request.QueryString}")" />
+                <label for="portal-language" class="sr-only">@L["Language"]</label>
+                <select id="portal-language" name="Culture" data-language-select>
+                    <option value="en" selected="@(CultureInfo.CurrentUICulture.TwoLetterISOLanguageName == "en")">English</option>
+                    <option value="it" selected="@(CultureInfo.CurrentUICulture.TwoLetterISOLanguageName == "it")">Italiano</option>
+                </select>
+                <button class="button button-small" type="submit">@L["ApplyLanguage"]</button>
+            </form>
+            @if (User.Identity?.IsAuthenticated == true)
+            {
+                <span class="account-name">@User.Identity.Name</span>
+                <form method="post" asp-page="/Logout">
+                    <button class="button button-small" type="submit">@L["SignOut"]</button>
+                </form>
+            }
+            else
+            {
+                <span class="badge">@L["EnterprisePortal"]</span>
+            }
+        </div>
+    </header>
+    <nav class="subnav" aria-label="@L["MainNavigation"]">
+        <a asp-page="/Index" class="@(!isApiReference ? "nav-active" : null)" aria-current="@(!isApiReference ? "page" : null)"><span aria-hidden="true">&#9707;</span> @L["Budgets"]</a>
+        <a asp-page="/ApiReference" class="@(isApiReference ? "nav-active" : null)" aria-current="@(isApiReference ? "page" : null)">@L["ApiReferenceTitle"]</a>
+        <span class="nav-caption">GitHub Copilot · AI credits</span>
+    </nav>
+    <main id="main" class="container">
+        @RenderBody()
+    </main>
+    <footer class="footer">
+        <span>@L["PortalFooter"]</span>
+        <span>@L["CurrencyFooter"]</span>
+    </footer>
+    <script src="~/js/site.js" asp-append-version="true" defer></script>
+</body>
+</html>

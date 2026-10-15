@@ -1,0 +1,17 @@
+{
+  "Entra": {
+    "TenantId": "00000000-0000-0000-0000-000000000001",
+    "ClientId": "00000000-0000-0000-0000-000000000002",
+    "ClientSecret": "<CLIENT-SECRET-VALUE>"
+  },
+  "Portal": {
+    "GitHub": {
+      "ApiBaseUrl": "https://api.example.ghe.com/",
+      "ApiVersion": "2026-03-10",
+      "Enterprise": "example-enterprise",
+      "AppId": "123456",
+      "PrivateKeyPemFile": "./github-app.local.pem"
+    },
+    "MaxBudgetAmount": 100
+  }
+}
